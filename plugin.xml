@@ -5,8 +5,8 @@
 	<engines>
 		<engine name="cordova" version=">=5.0.0" />
 	</engines>
-	<dependency id="cordova-plugin-dialogs" version="^2.0.1", />
-	<dependency id="cordova-plugin-inapppurchase" version="^1.2.0", />
+	<dependency id="cordova-plugin-dialogs" version="^2.0.1" />
+	<dependency id="cordova-plugin-inapppurchase" version="^1.2.0" />
 	<js-module src="www/index.js" name="inAppPurchaseSandbox">
 		<clobbers target="inAppPurchaseSandbox" />
 	</js-module>
