@@ -1,4 +1,5 @@
-export as namespace inAppPurchaseSandbox;
-
-export function enable():void;
-export function reset():void;
+declare namespace inAppPurchaseSandbox
+{
+	function enable():void;
+	function reset():void;
+}
