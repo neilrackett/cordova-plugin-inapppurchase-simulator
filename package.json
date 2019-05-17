@@ -1,0 +1,41 @@
+{
+	"name": "cordova-plugin-inapppurchase-sandbox",
+	"version": "0.1.0",
+	"description": "In-app purchase sandbox for testing apps that use cordova-plugin-inapppurchase",
+	"cordova": {
+		"id": "cordova-plugin-inapppurchase-sandbox",
+		"platforms": [
+			"android",
+			"ios"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/neilrackett/cordova-plugin-inapppurchase-sandbox.git"
+	},
+	"keywords": [
+		"ecosystem:cordova",
+		"cordova",
+		"cordova-ios",
+		"cordova-android",
+		"phonegap",
+		"ionic",
+		"iap",
+		"purchase",
+		"storekit",
+		"ios",
+		"android",
+		"play",
+		"appstore",
+		"sandbox"
+	],
+	"author": "Neil Rackett",
+	"license": "BSD",
+	"bugs": {
+		"url": "https://github.com/neilrackett/cordova-plugin-inapppurchase-sandbox/issues"
+	},
+	"homepage": "https://github.com/neilrackett/cordova-plugin-inapppurchase-sandbox#readme",
+	"dependencies": {
+		"cordova-plugin-dialogs": "^2.0.1"
+	}
+}
