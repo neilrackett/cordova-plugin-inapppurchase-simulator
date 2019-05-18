@@ -1,19 +1,40 @@
 'use strict';
 
-var getPurchases = function()
+var _products;
+
+function getProduct(productId)
+{
+	var products = _products.filter(function(product)
+	{
+		return product.productId == productId;
+	});
+
+	var product = products.pop();
+
+	return product || {
+		productId: productId,
+		title: productId,
+		description: 'Test product',
+		currency: 'GBP',
+		price: '£0.00',
+		priceAsDecimal: 0
+	}
+}
+
+function getPurchases()
 {
 	return JSON.parse(localStorage.getItem('inAppPurchaseSandbox_purchases')) || [];
-};
+}
 
-var setPurchases = function(purchases)
+function setPurchases(purchases)
 {
 	localStorage.setItem('inAppPurchaseSandbox_purchases', JSON.stringify(purchases));
-};
+}
 
-var clearPurchases = function()
+function clearPurchases()
 {
 	localStorage.removeItem('inAppPurchaseSandbox_purchases');
-};
+}
 
 /**
  * In-App Purchase Sandbox for conbo-plugin-inapppurchase
@@ -21,18 +42,39 @@ var clearPurchases = function()
  */
 var inAppPurchaseSandbox =
 {
-	enable: function()
+	enable: function(products)
 	{
-		// inAppPurchase.getProducts = function(productIds) 
+		// To enable testing on unsupported platforms, like "browser"
+		window.inAppPurchase || (window.inAppPurchase = {});
+
+		_products = products || [];
+
+		inAppPurchase.getProducts = function(productIds)
+		{
+			return new Promise(function(resolve, reject)
+			{
+				if (!productIds)
+				{
+					return reject('');
+				}
+
+				resolve(productIds.map(function(productId)
+				{
+					return getProduct(productId);
+				}));
+			});
+		};
 		
 		inAppPurchase.buy = function(productId) 
 		{
+			var product = getProduct(productId);
+
 			return new Promise(function(resolve, reject)
 			{
 				navigator.notification.confirm
 				(
-					'Tap Buy to confirm your In-App Purchase of 1 '+productId+'\n\n'+
-					'[Environment: Local]',
+					'Tap Buy to confirm your In-App Purchase of 1 '+product.title+' for '+product.price+'\n\n'+
+					'[Environment: Simulated]',
 
 					function(choice)
 					{

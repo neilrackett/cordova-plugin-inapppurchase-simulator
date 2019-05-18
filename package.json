@@ -1,12 +1,13 @@
 {
 	"name": "cordova-plugin-inapppurchase-sandbox",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "In-app purchase sandbox for testing apps that use cordova-plugin-inapppurchase",
 	"cordova": {
 		"id": "cordova-plugin-inapppurchase-sandbox",
 		"platforms": [
 			"android",
-			"ios"
+			"ios",
+			"browser"
 		]
 	},
 	"repository": {
@@ -18,6 +19,7 @@
 		"cordova",
 		"cordova-ios",
 		"cordova-android",
+		"cordova-browser",
 		"phonegap",
 		"ionic",
 		"iap",
