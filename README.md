@@ -57,6 +57,8 @@ inAppPurchaseSanbox.reset();
 
 That's it!
 
+Released under BSD 3-Clause license.
+
 Make a donation
 ---------------
 
