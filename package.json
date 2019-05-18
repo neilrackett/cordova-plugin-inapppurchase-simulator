@@ -1,9 +1,9 @@
 {
-	"name": "cordova-plugin-inapppurchase-sandbox",
+	"name": "cordova-plugin-inapppurchase-simulator",
 	"version": "0.2.0",
-	"description": "In-app purchase sandbox for testing apps that use cordova-plugin-inapppurchase",
+	"description": "In-app purchase simulator for testing apps that use cordova-plugin-inapppurchase",
 	"cordova": {
-		"id": "cordova-plugin-inapppurchase-sandbox",
+		"id": "cordova-plugin-inapppurchase-simulator",
 		"platforms": [
 			"android",
 			"ios",
@@ -12,7 +12,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/neilrackett/cordova-plugin-inapppurchase-sandbox.git"
+		"url": "git+https://github.com/neilrackett/cordova-plugin-inapppurchase-simulator.git"
 	},
 	"keywords": [
 		"ecosystem:cordova",
@@ -29,16 +29,14 @@
 		"android",
 		"play",
 		"appstore",
+		"simulator",
 		"sandbox"
 	],
 	"author": "Neil Rackett",
 	"license": "BSD",
 	"bugs": {
-		"url": "https://github.com/neilrackett/cordova-plugin-inapppurchase-sandbox/issues"
+		"url": "https://github.com/neilrackett/cordova-plugin-inapppurchase-simulator/issues"
 	},
-	"homepage": "https://github.com/neilrackett/cordova-plugin-inapppurchase-sandbox#readme",
-	"dependencies": {
-		"cordova-plugin-dialogs": "^2.0.1"
-	},
-	"types": "./types/inAppPurchaseSandbox.d.ts"
+	"homepage": "https://github.com/neilrackett/cordova-plugin-inapppurchase-simulator#readme",
+	"types": "./types/index.d.ts"
 }

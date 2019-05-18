@@ -1,4 +1,4 @@
-declare namespace inAppPurchaseSandbox
+declare namespace inAppPurchaseSimulator
 {
 	interface IProduct
 	{

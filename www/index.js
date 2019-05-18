@@ -14,7 +14,7 @@ function getProduct(productId)
 	return product || {
 		productId: productId,
 		title: productId,
-		description: 'Test product',
+		description: 'Simulated product',
 		currency: 'GBP',
 		price: '£0.00',
 		priceAsDecimal: 0
@@ -23,24 +23,24 @@ function getProduct(productId)
 
 function getPurchases()
 {
-	return JSON.parse(localStorage.getItem('inAppPurchaseSandbox_purchases')) || [];
+	return JSON.parse(localStorage.getItem('inAppPurchaseSimulator_purchases')) || [];
 }
 
 function setPurchases(purchases)
 {
-	localStorage.setItem('inAppPurchaseSandbox_purchases', JSON.stringify(purchases));
+	localStorage.setItem('inAppPurchaseSimulator_purchases', JSON.stringify(purchases));
 }
 
 function clearPurchases()
 {
-	localStorage.removeItem('inAppPurchaseSandbox_purchases');
+	localStorage.removeItem('inAppPurchaseSimulator_purchases');
 }
 
 /**
  * In-App Purchase Sandbox for conbo-plugin-inapppurchase
  * @author	Neil Rackett
  */
-var inAppPurchaseSandbox =
+var inAppPurchaseSimulator =
 {
 	enable: function(products)
 	{
@@ -73,8 +73,8 @@ var inAppPurchaseSandbox =
 			{
 				navigator.notification.confirm
 				(
-					'Tap Buy to confirm your In-App Purchase of 1 '+product.title+' for '+product.price+'\n\n'+
-					'[Environment: Simulated]',
+					'Tap Buy to confirm your In-App Purchase of 1 '+product.title+' for '+product.price+'.\n\n'+
+					'[Environment: Simulator]',
 
 					function(choice)
 					{
@@ -102,7 +102,7 @@ var inAppPurchaseSandbox =
 								{
 									resolve
 									({
-										transactionId: 'FAKE_TRANSACTION_'+Date.now(),
+										transactionId: 'SIMULATED_TRANSACTION_'+Date.now(),
 										receipt: productId,
 										signature: '',
 										productType: ''
@@ -127,7 +127,7 @@ var inAppPurchaseSandbox =
 		inAppPurchase.subscribe = function(productId)
 		{
 			// TODO Implement this?
-			return Promise.reject('cordova-plugin-inapppurchase-sandbox does not currently support subscribe');
+			return Promise.reject('cordova-plugin-inapppurchase-simulator does not currently support subscribe');
 		};
 		
 		inAppPurchase.consume = function(type, receipt, signature) 
@@ -148,7 +148,7 @@ var inAppPurchaseSandbox =
 		inAppPurchase.getReceipt = function () 
 		{
 			// TODO Implement this?
-			return Promise.reject('cordova-plugin-inapppurchase-sandbox does not currently support getReceipt');
+			return Promise.reject('cordova-plugin-inapppurchase-simulator does not currently support getReceipt');
 		};
 	},
 
@@ -158,4 +158,4 @@ var inAppPurchaseSandbox =
 	},
 };
 
-module.exports = inAppPurchaseSandbox;
+module.exports = inAppPurchaseSimulator;

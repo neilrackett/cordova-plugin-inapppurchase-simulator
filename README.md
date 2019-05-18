@@ -1,7 +1,7 @@
-In-App Purchase Sandbox plugin for Cordova
-==========================================
+In-App Purchase Simulator plugin for Cordova
+============================================
 
-This is a simple Cordova plugin that overrides and approximates all of the methods of `cordova-plugin-inapppurchase` to enable developers to test their in-app purchase workflow on Android and iOS devices, or in the browser, by creating local sandbox that simulates its functionality.
+This is a simple Cordova plugin that overrides all of the methods of `cordova-plugin-inapppurchase` to enable developers to test their in-app purchase workflow on Android and iOS devices, or in the browser, by creating local sandbox that simulates the plugin's in-app purchase functionality.
 
 The following methods are currently supported:
 
@@ -14,13 +14,13 @@ inAppPurchase.restorePurchases();
 inAppPurchase.getReceipt(); // Not currently implemented
 ```
 
-Don't forget to test your apps using the official App Store and/or Google Play sandbox environments before 
+Don't forget to disable the simulator and test your apps using the official App Store and/or Google Play sandbox environments before going into production!
 
 Installation
 ------------
 
 ```
-cordova plugin add cordova-plugin-inapppurchase-sandbox
+cordova plugin add cordova-plugin-inapppurchase-simulator
 ```
 
 Use
@@ -29,7 +29,7 @@ Use
 The quickest way to enable the local sandbox is to add the following command in your `"deviceready"` event handler:
 
 ```javascript
-inAppPurchaseSanbox.enable();
+inAppPurchaseSimulator.enable();
 ```
 
 However, to make things more realistic, you can pass an array of products into the `enable` method in the same format as those returned by the original plugin, which will be used to populate `buy` dialogues, etc, for example:
@@ -46,13 +46,13 @@ let productsIds =
 	priceAsDecimal: 1.23
 }];
 
-inAppPurchaseSanbox.enable(productIds);
+inAppPurchaseSimulator.enable(productIds);
 ```
 
 To clear any test purchases you've made, use:
 
 ```javascript
-inAppPurchaseSanbox.reset();
+inAppPurchaseSimulator.reset();
 ```
 
 That's it!
