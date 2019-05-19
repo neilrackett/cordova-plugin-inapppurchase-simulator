@@ -74,7 +74,7 @@ var inAppPurchaseSimulator =
 				navigator.notification.confirm
 				(
 					'Tap Buy to confirm your In-App Purchase of 1 '+product.title+' for '+product.price+'.\n\n'+
-					'[Environment: Simulator]',
+					'This is a simulated purchase, you will not be charged.',
 
 					function(choice)
 					{

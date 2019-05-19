@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-inapppurchase-simulator" version="0.2.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-inapppurchase-simulator" version="0.2.1">
 	<name>In-App Purchase Sandbox</name>
 	<description>In-app purchase simulator for testing apps that use cordova-plugin-inapppurchase</description>
 	<engines>
