@@ -1,5 +1,12 @@
+/**
+ * In-app purchase simulator for testing apps that use cordova-plugin-inapppurchase
+ * @author	Neil Rackett
+ */
 declare namespace inAppPurchaseSimulator
 {
+	/**
+	 * Product descriptor
+	 */
 	interface IProduct
 	{
 		productId:string;
