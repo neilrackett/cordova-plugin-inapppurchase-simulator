@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-inapppurchase-simulator" version="0.2.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-inapppurchase-simulator" version="0.3.0">
 	<name>In-App Purchase Sandbox</name>
 	<description>In-app purchase simulator for testing apps that use cordova-plugin-inapppurchase</description>
 	<engines>
 		<engine name="cordova" version=">=5.0.0" />
 	</engines>
+	<dependency id="cordova-plugin-device" version="^2.0.0" />
 	<dependency id="cordova-plugin-dialogs" version="^2.0.0" />
 	<dependency id="cordova-plugin-inapppurchase" version="^1.0.0" />
 	<js-module src="www/index.js" name="inAppPurchaseSimulator">

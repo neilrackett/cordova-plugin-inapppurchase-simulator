@@ -42,6 +42,18 @@ function clearPurchases()
  */
 var inAppPurchaseSimulator =
 {
+	autoEnable: function()
+	{
+		var enabled = cordova.platformId == 'browser' || device.isVirtual;
+
+		if (enabled)
+		{
+			this.enable();
+		}
+
+		return enabled;
+	},
+
 	enable: function(products)
 	{
 		// To enable testing on unsupported platforms, like "browser"
