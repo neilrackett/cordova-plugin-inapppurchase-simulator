@@ -21,7 +21,7 @@ declare namespace inAppPurchaseSimulator
 	function enable(products?:IProduct[]):void;
 	
 	/**
-	 * Clears all user purchases stored in the simulator
+	 * Clears all test purchases stored in the simulator
 	 */
 	function reset():void;
 }

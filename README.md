@@ -36,7 +36,7 @@ However, to make things more realistic, you can pass an array of products into t
 
 ```javascript
 
-let productsIds =
+let products =
 [{
 	productId: 'my.awesome.product',
 	title: 'My Awesome Product',
@@ -46,7 +46,13 @@ let productsIds =
 	priceAsDecimal: 1.23
 }];
 
-inAppPurchaseSimulator.enable(productIds);
+inAppPurchaseSimulator.enable(products);
+```
+
+Alternatively, if you would like to automatically enable the simulator when you're testing in a browser, simulator or emulator:
+
+```javascript
+inAppPurchaseSimulator.autoEnable(); // Accepts same optional "products" parameter as above
 ```
 
 To clear any test purchases you've made, use:

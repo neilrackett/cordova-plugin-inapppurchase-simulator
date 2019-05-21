@@ -42,13 +42,13 @@ function clearPurchases()
  */
 var inAppPurchaseSimulator =
 {
-	autoEnable: function()
+	autoEnable: function(products)
 	{
 		var enabled = cordova.platformId == 'browser' || device.isVirtual;
 
 		if (enabled)
 		{
-			this.enable();
+			this.enable(products);
 		}
 
 		return enabled;
