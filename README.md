@@ -49,7 +49,7 @@ let products =
 inAppPurchaseSimulator.enable(products);
 ```
 
-Alternatively, if you would like to automatically enable the simulator when you're testing in a browser, simulator or emulator:
+Alternatively, if you would like to automatically enable the simulator when you're testing in a browser, simulator or emulator (but not on devices):
 
 ```javascript
 inAppPurchaseSimulator.autoEnable(); // Accepts same optional "products" parameter as above

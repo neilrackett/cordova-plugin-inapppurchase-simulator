@@ -20,7 +20,7 @@ declare namespace inAppPurchaseSimulator
 	/**
 	 * Enables the IAP simulator if the app is running in a browser or a simulator/emulator
 	 */
-	function autoEnable():boolean;
+	function autoEnable(products?:IProduct[]):boolean;
 
 	/**
 	 * Enables the IAP simulator
