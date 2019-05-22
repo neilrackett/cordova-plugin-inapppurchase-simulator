@@ -127,7 +127,7 @@ var inAppPurchaseSimulator =
 							return;
 						}
 
-						reject('In-App Purchase cancelled');
+						reject({errorMessage:'User cancelled in-app purchase', errorCode:2});
 					},
 
 					'Confirm Your In-App Purchase',

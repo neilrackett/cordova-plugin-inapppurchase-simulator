@@ -1,6 +1,6 @@
 {
 	"name": "cordova-plugin-inapppurchase-simulator",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "In-app purchase simulator for testing apps that use cordova-plugin-inapppurchase",
 	"cordova": {
 		"id": "cordova-plugin-inapppurchase-simulator",
